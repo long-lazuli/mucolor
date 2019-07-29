@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+    <title>µColor tests</title>
+    <style>
+        pre {
+            border: inset;
+            white-space: pre;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        pre>script {
+            border-bottom: ridge;
+            display: block;
+            white-space: pre;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+    <script src="bundle.js"></script>
+</head>
+
+<body>
+    <h1>µColor tests</h1>
+    <script>write = (msg) => document.write( `${msg}\n` )</script>
+    <pre><script>
+        write( new µColor( 'rebeccapurple' ) );
+    </script></pre>
+    <pre><script>
+        const redToPurple = new µColor( 'red' )
+        write( redToPurple );
+        redToPurple.blue = 127
+        write( redToPurple );
+    </script></pre>
+    <pre><script>
+        let fadedRed = new µColor( 'red' )
+        write( fadedRed );
+        fadedRed.alpha = .5
+        write( fadedRed );
+    </script></pre>
+
+    <pre><script>
+        let triad = new µColor( 'red' )
+        write( triad );
+        triad.hue += 120
+        write( triad );
+        triad.hue += 120
+        write( triad );
+    </script></pre>
+
+</body>

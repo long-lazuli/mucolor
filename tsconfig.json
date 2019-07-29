@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "rootDir": "./_sources/",
+    "outDir": "./_dist/",
+    "strict": true,
+    "target": "es6",
+    "module": "es6",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "listEmittedFiles": true,
+    "pretty": true
+  }
+}
