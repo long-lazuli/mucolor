@@ -122,6 +122,10 @@ export class µColor {
   get lightness(){ return this.hsl[2] }
   set lightness( _: number ){ const [h, s,] = this.hsla; this.updateHSL(h, s, _ ) }
 
+  get brightness() {
+    const [r,g,b] = this.rgb
+    return r*0.2126 + g*0.7152 + b*0.0722
+  }
 }
 
 (global as any).µColor = µColor;
